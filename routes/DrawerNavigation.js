@@ -56,7 +56,11 @@ function OurCultureStack() {
 export default function DrawerNavigation() {
   return (
     <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name="Home" component={EventStack} options={{ title: 'Home' }} />
+      <Drawer.Screen 
+        name="Home" 
+        component={EventStack} 
+        options={{ headerShown: false }} 
+      />
       <Drawer.Screen name="Feedback" component={FeedbackStack} />
       <Drawer.Screen name="Rewards" component={RewardsStack} />
       <Drawer.Screen name="YourEvents" component={YourEventsStack} />
