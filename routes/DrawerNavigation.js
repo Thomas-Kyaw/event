@@ -24,7 +24,7 @@ function FeedbackStack() {
 function RewardsStack() {
   return (
     <Stack.Navigator screenOptions={{ headerTitleAlign: 'center' }}>
-      <Stack.Screen name="RewardsStackScreen" component={RewardsScreen} options={{ title: 'Rewards' }} />
+      <Stack.Screen name="RewardsStackScreen" component={RewardsScreen} options={{ title: 'Rewards' , headerShown: false}} title/>
     </Stack.Navigator>
   );
 }
@@ -62,7 +62,10 @@ export default function DrawerNavigation() {
         options={{ headerShown: false }} 
       />
       <Drawer.Screen name="Feedback" component={FeedbackStack} />
-      <Drawer.Screen name="Rewards" component={RewardsStack} />
+      <Drawer.Screen name="Rewards" 
+        component={RewardsStack} 
+        options={{ headerShown: true }} 
+      />
       <Drawer.Screen name="YourEvents" component={YourEventsStack} />
       <Drawer.Screen name="CulturalEvents" component={CulturalEventsStack} />
       <Drawer.Screen name="OurCulture" component={OurCultureStack} />

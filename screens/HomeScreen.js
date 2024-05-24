@@ -129,12 +129,12 @@ const HomeScreen = () => {
                 <Text style={styles.title}>{item.title}</Text>
                 <View style={styles.buyContainer}>
                   <FontAwesome name="shopping-cart" size={16} color="#888" />
-                  <Pressable
+                  <TouchableOpacity
                     style={styles.buyButton}
                     onPress={() => navigation.navigate('Checkout', { event: item })}
                   >
                     <Text style={styles.buyButtonText}>Buy</Text>
-                  </Pressable>
+                  </TouchableOpacity>
                 </View>
               </View>
               <View style={styles.horizontalLine} />
